@@ -41,7 +41,8 @@ export const recipes = [
             420
         ],
         "imageURL": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg",
-        "originalURL": "http://www.food.com/recipe/to-die-for-crock-pot-roast-27208"
+        "originalURL": "http://www.food.com/recipe/to-die-for-crock-pot-roast-27208",
+        "isFavorite": true,
     },
     {
         "name": "Roasted Asparagus",
@@ -87,7 +88,8 @@ export const recipes = [
             0
         ],
         "imageURL": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/50/84/7/picMcSyVd.jpg",
-        "originalURL": "http://www.food.com/recipe/roasted-asparagus-50847"
+        "originalURL": "http://www.food.com/recipe/roasted-asparagus-50847",
+        "isFavorite": false,
     },
     {
         "name": "Curried Lentils and Rice",
@@ -132,7 +134,8 @@ export const recipes = [
             20,
             0
         ],
-        "imageURL": "http://dagzhsfg97k4.cloudfront.net/wp-content/uploads/2012/05/lentils3.jpg"
+        "imageURL": "http://dagzhsfg97k4.cloudfront.net/wp-content/uploads/2012/05/lentils3.jpg",
+        "isFavorite": false,
     },
     {
         "name": "Big Night Pizza",
@@ -196,7 +199,8 @@ export const recipes = [
             15,
             0
         ],
-        "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg"
+        "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg",
+        "isFavorite": false,
     },
     {
         "name": "Cranberry and Apple Stuffed Acorn Squash Recipe",
@@ -253,7 +257,8 @@ export const recipes = [
             0
         ],
         "imageURL": "https://az810478.vo.msecnd.net/media/images/default-source/Recipes/sausage/cranberry-sausage-and-apple-stuffed-acorn-squash.jpg",
-        "originalURL": ""
+        "originalURL": "",
+        "isFavorite": false,
     },
     {
         "name": "Mic's Yorkshire Puds",
@@ -302,7 +307,8 @@ export const recipes = [
             30
         ],
         "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg",
-        "originalURL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg"
+        "originalURL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg",
+        "isFavorite": false,
     },
     {
         "name": "Old-Fashioned Oatmeal Cookies",
@@ -393,7 +399,8 @@ export const recipes = [
             0
         ],
         "imageURL": "http://s3.amazonaws.com/gmi-digital-library/65caecf7-a8f7-4a09-8513-2659cf92871e.jpg",
-        "originalURL": "#"
+        "originalURL": "#",
+        "isFavorite": false,
     },
     {
         "name": "Blueberry Oatmeal Squares",
@@ -470,7 +477,8 @@ export const recipes = [
             0
         ],
         "imageURL": "https://ifoodreal.com/wp-content/uploads/2015/05/main-blueberry-crumb-bars-clean-eating-recipes.jpg",
-        "originalURL": "http://www.canadianliving.com/food/blueberry_oatmeal_squares.php"
+        "originalURL": "http://www.canadianliving.com/food/blueberry_oatmeal_squares.php",
+        "isFavorite": false,
     },
     {
         "name": "Curried chicken salad",
@@ -559,6 +567,7 @@ export const recipes = [
             0
         ],
         "imageURL": "http://www.chatelaine.com/wp-content/uploads/2013/05/Curried-chicken-salad.jpg",
-        "originalURL": "http://www.chatelaine.com/recipe/stovetop-cooking-method/curried-chicken-salad/"
+        "originalURL": "http://www.chatelaine.com/recipe/stovetop-cooking-method/curried-chicken-salad/",
+        "isFavorite": false,
     }
 ]

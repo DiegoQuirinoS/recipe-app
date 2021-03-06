@@ -10,12 +10,12 @@ function RecipeApp() {
     <>
       <Router>
         <RecipeHeader />
-        <Switch>
-          <Container>
+        <Container>
+          <Switch>
             <Route path="/" exact component={RecipeContent} />
             <Route path="/detail/:index" component={RecipeDetail} />
-          </Container>
-        </Switch>
+          </Switch>
+        </Container>
       </Router>
     </>
   );

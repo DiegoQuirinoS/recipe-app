@@ -20,7 +20,7 @@ function RecipeContent() {
         <Typography component="div">
           <Grid container spacing={2}>
             {recipes.map((recipe, index) => (
-              <Grid key={index} item xs={12} sm={6} lg={4} xl={1} >
+              <Grid key={index} item xs={12} sm={6} lg={4} xl={4} >
                 <RecipeReviewCard recipe={recipe} index={index} />
               </Grid>
             ))}

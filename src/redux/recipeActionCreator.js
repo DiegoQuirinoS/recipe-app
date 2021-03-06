@@ -4,3 +4,17 @@ export const getRecipe = (index) => {
         payload: index,
     }
 }
+
+export const deleteRecipe = (index) => {   
+    return {
+        type: 'DELETE_RECIPE',
+        payload: index
+    }
+}
+
+export const updateFavoriteRecipe = (index) => {
+    return{
+        type: 'UPDATE_FAVORITE_RECIPE',
+        payload:index
+    }
+}

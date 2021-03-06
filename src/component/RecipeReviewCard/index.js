@@ -13,9 +13,12 @@ import { red } from "@material-ui/core/colors";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import DeleteIcon from '@material-ui/icons/Delete';
 
 
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { deleteRecipe, updateFavoriteRecipe } from "../../redux/recipeActionCreator";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,11 +42,14 @@ const useStyles = makeStyles((theme) => ({
   cardHeader: {
     overflow: 'hidden',
   },
+  favorite: {
+    color: '#ff6961'
+  }
 }));
 
 export default function RecipeReviewCard({ recipe, index }) {
   const classes = useStyles();
-
+  const dispatch = useDispatch()
   return (
     <Card>
       <CardHeader        
@@ -69,8 +75,11 @@ export default function RecipeReviewCard({ recipe, index }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+        <IconButton aria-label="delete from recipes" onClick={() => dispatch(deleteRecipe(index))}>
+          <DeleteIcon />
+        </IconButton>
+        <IconButton aria-label="add to favorites" onClick={() => dispatch(updateFavoriteRecipe(index))}>
+          <FavoriteIcon className={recipe.isFavorite && classes.favorite}/>
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />
