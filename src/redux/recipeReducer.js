@@ -12,12 +12,15 @@ export default (state = { recipes, recipe: {} }, action) => {
                 ...state,
                 recipes: [...state.recipes]
             };
-        case 'UPDATE_FAVORITE_RECIPE':           
-            let favoriteRecipe = state.recipes.splice(action.payload, 1);
-            favoriteRecipe[0].isFavorite = !favoriteRecipe[0].isFavorite;
+        case 'UPDATE_FAVORITE_RECIPE':  
+            let favoriteRecipe = state.recipes[action.payload];
+            favoriteRecipe.isFavorite = !favoriteRecipe.isFavorite;
+            let newRecipes = state
+                                .recipes
+                                .map(recipe => recipe === favoriteRecipe ? recipe = favoriteRecipe : recipe);
             return {
                 ...state,
-                recipes: [...state.recipes, favoriteRecipe[0]]
+                recipes: [...newRecipes]
             }
         default:
             return state;
