@@ -15,6 +15,13 @@ export const deleteRecipe = (index) => {
 export const updateFavoriteRecipe = (index) => {
     return{
         type: 'UPDATE_FAVORITE_RECIPE',
-        payload:index
+        payload: index
+    }
+}
+
+export const filterRecipe = (name) => {
+    return{
+        type: 'FILTER_RECIPE',
+        payload: name
     }
 }

@@ -6,21 +6,29 @@ export default (state = { recipes, recipe: {} }, action) => {
                 ...state,
                 recipe: state.recipes[action.payload]
             };
-        case 'DELETE_RECIPE':
-            state.recipes.splice(action.payload, 1);            
+        case 'DELETE_RECIPE':                  
             return {
                 ...state,
-                recipes: [...state.recipes]
+                recipes: state.recipes.filter(recipe => recipe.id !== action.payload)
             };
-        case 'UPDATE_FAVORITE_RECIPE':  
-            let favoriteRecipe = state.recipes[action.payload];
-            favoriteRecipe.isFavorite = !favoriteRecipe.isFavorite;
-            let newRecipes = state
-                                .recipes
-                                .map(recipe => recipe === favoriteRecipe ? recipe = favoriteRecipe : recipe);
+        case 'UPDATE_FAVORITE_RECIPE':             
             return {
                 ...state,
-                recipes: [...newRecipes]
+                recipes: state
+                            .recipes
+                            .map(recipe => {
+                                return  recipe.id === action.payload ? { ...recipe, isFavorite: !recipe.isFavorite } : recipe
+                            })
+            }
+        case 'FILTER_RECIPE':           
+            return {
+                ...state,
+                recipes: action.payload === '' ? 
+                            recipes : 
+                            recipes.filter(recipe =>  recipe
+                                                        .name
+                                                        .toLowerCase()
+                                                        .includes(action.payload.toLowerCase()))
             }
         default:
             return state;

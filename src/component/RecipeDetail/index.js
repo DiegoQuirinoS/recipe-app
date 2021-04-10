@@ -20,9 +20,7 @@ function RecipeDetail({ match }) {
       {recipe.ingredients &&
         recipe.ingredients.map((ingredient, index) => (
           <div key={index}>
-            <span>{ingredient.quantity}</span>
-            <span>{ingredient.name}</span>
-            <span>{ingredient.type}</span>
+            <span>{ingredient.quantity} {ingredient.name}</span>            
           </div>
         ))}
       <h3>How to prepare</h3>

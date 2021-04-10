@@ -71,24 +71,21 @@ export default function RecipeReviewCard({ recipe, index }) {
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          {recipe.name}
+          <Link to={`/detail/${index}`}>
+            {recipe.name}
+          </Link>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="delete from recipes" onClick={() => dispatch(deleteRecipe(index))}>
+        <IconButton aria-label="delete from recipes" onClick={() => dispatch(deleteRecipe(recipe.id))}>
           <DeleteIcon />
         </IconButton>
-        <IconButton aria-label="add to favorites" onClick={() => dispatch(updateFavoriteRecipe(index))}>
+        <IconButton aria-label="add to favorites" onClick={() => dispatch(updateFavoriteRecipe(recipe.id))}>
           <FavoriteIcon className={recipe.isFavorite && classes.favorite}/>
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />
-        </IconButton>
-        <IconButton aria-label="show more">
-          <Link to={`/detail/${index}`}>
-            Recipe
-          </Link>
-        </IconButton>
+        </IconButton>        
       </CardActions>
     </Card>
   );
