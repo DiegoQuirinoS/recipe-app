@@ -30,6 +30,11 @@ export default (state = { recipes, recipe: {} }, action) => {
                                                         .toLowerCase()
                                                         .includes(action.payload.toLowerCase()))
             }
+        case 'ADD_RECIPE':           
+            return {
+                ...state,
+                recipes: [...recipes, action.payload]
+            }
         default:
             return state;
     }
